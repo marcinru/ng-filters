@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="filters">
+<html lang="en" ng-app="countries">
 <head>
 	<meta charset="UTF-8">
 	<title>Filters</title>
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-	<section class="panel-body" ng-controller="tableCtrl as table">
+	<section class="panel-body" ng-controller="countriesCtrl as countries">
 		<div class="form-group">
-			<input type="text" placeholder="Filter..." class="form-control" ng-model="table.filter">
+			<input type="text" placeholder="Filter..." class="form-control" ng-model="countries.filter">
 		</div>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Name</th>
-					<th>City</th>
+					<th>Country</th>
+					<th>Capital</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="person in table.data | orderBy:'name' | filter:table.filter">
-					<td>{{person.id}}</td>
-					<td>{{person.name}}</td>
-					<td>{{person.city}}</td>
+				<tr ng-repeat="country in countries.list | orderBy:'name' | filter:countries.filter">
+					<td>{{country.id}}</td>
+					<td>{{country.name}}</td>
+					<td>{{country.capital}}</td>
 				</tr>
 			</tbody>
 		</table>

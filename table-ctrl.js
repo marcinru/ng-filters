@@ -1,7 +1,7 @@
-angular.module('filters', []).controller('tableCtrl', function($http) {
-	var table = this;
-	table.data = [];
-	$http.get("data.json").then(function(response) {
-		table.data = response.data;
+angular.module('countries', []).controller('countriesCtrl', function($http) {
+	var countries = this;
+	countries.list = [];
+	$http.get("countries.json").then(function(response) {
+		countries.list = response.data;
 	});
 });

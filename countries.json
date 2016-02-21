@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Sweden", "capital": "Stockholm" },
+  { "id": 2, "name": "Poland", "capital": "Warsaw" },
+  { "id": 3, "name": "Norway", "capital": "Oslo" },
+  { "id": 4, "name": "Germany", "capital": "Berlin" },
+  { "id": 5, "name": "United Kingdom", "capital": "London" }
+]
