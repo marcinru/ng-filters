@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="countries">
+<html ng-app="filters">
 <head>
-	<meta charset="UTF-8">
-	<title>Filters</title>
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <title>Filters</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
-	<section class="container" ng-controller="countriesCtrl as countries">
-		<h1>ng-filters</h1>
-		<div class="form-group">
-			<input type="text" placeholder="Filter..." class="form-control" ng-model="countries.filter">
-		</div>
-		<table class="table table-bordered">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Country</th>
-					<th>Capital</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="country in countries.list | orderBy:'name' | filter:countries.filter">
-					<td>{{country.id}}</td>
-					<td>{{country.name}}</td>
-					<td>{{country.capital}}</td>
-				</tr>
-			</tbody>
-		</table>
-	</section>
-	<script src="node_modules/angular/angular.js"></script>
-	<script src="table-ctrl.js"></script>
+<body class="container">
+    <section ng-controller="countriesCtrl as countries">
+        <h1>ng-filters</h1>
+        <div class="form-group">
+            <input type="text" placeholder="Search" class="form-control" ng-model="countries.filter">
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                    <th>Capital</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="country in countries.list | orderBy:'name' | filter:countries.filter">
+                    <td>{{country.id}}</td>
+                    <td>{{country.name}}</td>
+                    <td>{{country.capital}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="table-ctrl.js"></script>
 </body>
 </html>
