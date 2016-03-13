@@ -6,7 +6,8 @@ angular.module('filters', []).controller('countriesCtrl', function($http) {
     });
     countries.sortOrderAsc = true;
     countries.sortOrder = 'name';
-        countries.toggleSortOrder = function() {
+
+    countries.toggleSortOrder = function() {
         countries.sortOrder = countries.sortOrderAsc ? '-name' : 'name';
         countries.sortOrderAsc = !countries.sortOrderAsc;
     }
