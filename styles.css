@@ -1,0 +1,5 @@
+.sortable:hover {
+  cursor: pointer;
+  background: whitesmoke;
+  color: royalblue;
+}
