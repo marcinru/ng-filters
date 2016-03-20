@@ -1,6 +1,8 @@
 angular.module('filtersApp', []).controller('countriesCtrl', function(countriesProvider) {
     var countries = this;
-    countries.list = countriesProvider.getCountries();
+    countriesProvider.getCountries().then(function (data) {
+        countries.list = data;
+    });
     countries.sortOrderAsc = true;
     countries.sortOrder = 'name';
 
