@@ -1,4 +1,4 @@
-angular.module('filtersApp', []).controller('countriesCtrl', function(countriesProvider) {
+angular.module('filtersApp', []).controller('countriesCtrl', ['countriesProvider', function(countriesProvider) {
     var countries = this;
     countriesProvider.getCountries().then(function (data) {
         countries.list = data;
@@ -10,4 +10,4 @@ angular.module('filtersApp', []).controller('countriesCtrl', function(countriesP
         countries.sortOrder = countries.sortOrderAsc ? '-name' : 'name';
         countries.sortOrderAsc = !countries.sortOrderAsc;
     }
-});
+}]);
