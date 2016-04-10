@@ -1,3 +1,3 @@
 angular.module('filtersApp').factory('Countries', function ($resource) {
-    return $resource('countries.json');
+    return $resource('api/countries.json');
 });
